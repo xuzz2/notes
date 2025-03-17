@@ -1,130 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background: #333;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
-    nav {
-      background: #444;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 800px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h2 {
-      color: #333;
-      border-bottom: 2px solid #333;
-      padding-bottom: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: #333;
-      color: #fff;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-    .gallery img {
-      max-width: 100%;
-      height: auto;
-      margin: 10px 0;
-      border-radius: 8px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Life Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f5f6fa;
+            --text-color: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        #add-entry {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 2rem;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        #add-entry:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>Welcome to My Personal Website</h1>
-    <p>Documenting my life and sharing knowledge.</p>
-  </header>
+    <header>
+        <h1>My Life Journey</h1>
+        <p>Recording moments, memories, and milestones</p>
+    </header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#life-journal">Life Journal</a>
-    <a href="#knowledge-hub">Knowledge Hub</a>
-    <a href="#photo-gallery">Photo Gallery</a>
-    <a href="#blog">Blog</a>
-  </nav>
+    <div class="container">
+        <section class="section">
+            <h2>Recent Entries</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>First Day at New Job</h3>
+                    <p class="date">March 17, 2025</p>
+                    <p>Started my new journey today. Excited about the opportunities ahead and meeting new colleagues!</p>
+                </div>
+                <div class="card">
+                    <h3>Weekend Adventure</h3>
+                    <p class="date">March 15, 2025</p>
+                    <p>Explored the hiking trails with friends. The view from the summit was breathtaking!</p>
+                </div>
+                <div class="card">
+                    <h3>Learning Progress</h3>
+                    <p class="date">March 10, 2025</p>
+                    <p>Completed my first machine learning project. The journey of learning never stops!</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- Life Journal Section -->
-  <section id="life-journal">
-    <h2>Life Journal</h2>
-    <p>Here, I share stories and reflections from my daily life.</p>
-    <p><strong>Recent Entry:</strong> Today, I explored a new hiking trail and captured some amazing views. It reminded me of the importance of spending time in nature.</p>
-  </section>
-
-  <!-- Knowledge Hub Section -->
-  <section id="knowledge-hub">
-    <h2>Knowledge Hub</h2>
-    <p>This is where I share articles and resources on topics I’m passionate about.</p>
-    <ul>
-      <li><a href="#">The Basics of Photography</a></li>
-      <li><a href="#">How to Start a Blog</a></li>
-      <li><a href="#">Introduction to JavaScript</a></li>
-    </ul>
-  </section>
-
-  <!-- Photo Gallery Section -->
-  <section id="photo-gallery">
-    <h2>Photo Gallery</h2>
-    <p>A collection of my favorite photos from my adventures.</p>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/600x400" alt="Placeholder Image 1">
-      <img src="https://via.placeholder.com/600x400" alt="Placeholder Image 2">
-      <img src="https://via.placeholder.com/600x400" alt="Placeholder Image 3">
+        <section class="section">
+            <h2>Categories</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Work & Career</h3>
+                    <p>Professional milestones and achievements</p>
+                </div>
+                <div class="card">
+                    <h3>Personal Growth</h3>
+                    <p>Learning experiences and self-improvement</p>
+                </div>
+                <div class="card">
+                    <h3>Adventures</h3>
+                    <p>Travel stories and exciting experiences</p>
+                </div>
+            </div>
+        </section>
     </div>
-  </section>
 
-  <!-- Blog Section -->
-  <section id="blog">
-    <h2>Blog</h2>
-    <p>Regular updates on my interests, projects, and discoveries.</p>
-    <article>
-      <h3>My First Blog Post</h3>
-      <p>In this post, I share my journey of learning web development and how I built this website.</p>
-      <a href="#">Read More</a>
-    </article>
-    <article>
-      <h3>Top 5 Books I Read This Year</h3>
-      <p>A list of my favorite books and why I recommend them.</p>
-      <a href="#">Read More</a>
-    </article>
-  </section>
+    <button id="add-entry" title="Add new entry">+</button>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2023 My Personal Website. All rights reserved.</p>
-  </footer>
+    <script>
+        document.getElementById('add-entry').addEventListener('click', () => {
+            alert('Feature coming soon: Add your new life moment here!');
+        });
+    </script>
 </body>
 </html>
